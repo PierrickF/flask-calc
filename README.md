@@ -1,3 +1,9 @@
+# This section used for tests only
+
+Commiting changes here should trigger GitHub actions.
+
+---
+
 # Flask Calculator App
 
 This repository contains the minimal code needed to have a working calculator
