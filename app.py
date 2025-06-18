@@ -14,19 +14,31 @@ def calculate():
     operation = request.form['operation']
 
     if operation == 'add':
-        result = float(num1) + float(num2)
+        result = add(num1, num2)
         return render_template('app.html', result=result)
 
     elif operation == 'subtract':
-        result = float(num1) - float(num2)
+        result = subtract(num1, num2)
         return render_template('app.html', result=result)
 
     elif operation == 'multiply':
-        result = float(num1) * float(num2)
+        result = multiply(num1, num2)
         return render_template('app.html', result=result)
 
     elif operation == 'divide':
-        result = float(num1) / float(num2)
+        result = divide(num1, num2)
         return render_template('app.html', result=result)
     else:
         return render_template('app.html')
+
+def add(num1, num2):
+    return float(num1) + float(num2)
+
+def subtract(num1, num2):
+    return float(num1) - float(num2)
+
+def multiply(num1, num2):
+    return float(num1) * float(num2)
+
+def divide(num1, num2):
+    return float(num1) / float(num2)
