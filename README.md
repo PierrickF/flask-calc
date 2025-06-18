@@ -41,3 +41,9 @@ flask run
 ```
 deactivate
 ```
+
+# Testing
+
+```
+python -m unittest test.py
+```
