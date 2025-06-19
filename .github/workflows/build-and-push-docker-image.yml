@@ -1,7 +1,5 @@
-
 name: Build and Push Docker Image
 
-# Triggers
 on:
   workflow_run:
     workflows: [Test Python Code]
@@ -13,7 +11,7 @@ permissions:
 
 jobs:
   build-and-push:
-    name: Build and Push Landing Page Docker Image
+    name: Build and Push Docker Image
     runs-on: ubuntu-latest
 
     steps:
@@ -35,4 +33,5 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
+          tags: ${{ steps.meta.outputs.tags }}
           push: true

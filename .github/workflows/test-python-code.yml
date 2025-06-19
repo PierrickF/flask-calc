@@ -1,4 +1,3 @@
-# This workflow will install Python dependencies and run tests
 name: Test Python Code
 
 on:
